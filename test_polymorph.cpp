@@ -10,6 +10,8 @@
 
 using namespace std;
 
+#include <vector>
+
 #include "Character.h"
 #include "Yoshi.h"
 #include "Mario.h"
@@ -28,6 +30,19 @@ int main(int argc, char* argv[]) {
   Yoshi       character2 = Yoshi(0,Yoshi::GREEN);
   Mario       character3 = Mario(0,Mario::BLUE);
   Mario       character4 = Mario(2,Mario::RED);
+
+  
+  //std::vector<Character*>
+
+  std::vector<Character*> v; // vector v manipulant des entiers(type Character*)
+  v.push_back(&character1); // Empile l'entier 1
+  v.push_back(&character2); 
+  v.push_back(&character3); 
+  v.push_back(&character4); 
+  for (int i=0; i<5; i++) {
+    std::cout << v[i] << endl; 
+  }
+   
 
   ofstream fichier("Speed.txt", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
   if (fichier) {
