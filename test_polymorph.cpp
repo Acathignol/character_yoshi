@@ -42,8 +42,11 @@ int main(int argc, char* argv[]) {
   v.push_back(character3); 
   v.push_back(character4); 
   
-  for (int i=0; i<5; i++) {
-    std::cout << "Address in Vector: "<<v[i] << endl; 
+  for (int i=0; i<v.size(); i++) {
+    std::cout << "Address in Vector: " <<v[i]<< endl; 
+    printf("\n" );  
+    printf("What Am I? in Vector : ");
+    v[i]->WhatAmI();
   }
   
   
