@@ -35,7 +35,8 @@ int main(int argc, char* argv[]) {
   
   //std::vector<Character*>
 
-  std::vector<Character*> v; // vector v manipulant des entiers(type Character*)
+  std::vector<Character*> v;
+  // vector v manipulant des entiers(type Character*)
   v.push_back(character1); // Empile l'entier 1
   v.push_back(character2); 
   v.push_back(character3); 
@@ -57,7 +58,8 @@ int main(int argc, char* argv[]) {
   printf("\n" );  
   printf("What Am I? with \'range-based for\' for the Vector : \n");
   for (Character* d : v) { d->WhatAmI(); } // syntaxe de base
-  for (auto d : v) { cout << "What Am I? with \'auto\': " << d << endl; } // utilisation du mot clé auto
+  for (auto d : v) { cout << "What Am I? with \'auto\': " << d << endl;}
+   // utilisation du mot clé auto
 
    
   std::list<Character*> l;
@@ -76,7 +78,8 @@ int main(int argc, char* argv[]) {
   printf("\n" );  
   printf("What Am I? with \'range-based for\' for the List : \n");
   for (Character* d : l) { d->WhatAmI(); } // syntaxe de base
-  for (auto d : l) { cout << "What Am I? with \'auto\': " << d << endl; } // utilisation du mot clé auto
+  for (auto d : l) { cout << "What Am I? with \'auto\': " << d << endl;}
+   // utilisation du mot clé auto
 
 
  
@@ -86,22 +89,27 @@ int main(int argc, char* argv[]) {
     std::cout << l[i] << endl; 
   }*/
 
-  ofstream fichier("Speed.txt", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
+  ofstream fichier("Speed.txt", ios::out | ios::trunc); 
+// ouverture en écriture avec effacement du fichier ouvert
+
   if (fichier) {
     for (int i=0; i<11; i++){
       character1->Accelerate();
       character2->Accelerate();
       character3->Accelerate();
       character4->Accelerate();
-      fichier << "Char1 : " << character1->speed()<< " - Char2 : " << character2->speed()<< " - Char3 : " << character3->speed()<<" - Char4 : " << character4->speed()<< endl;
+      fichier << "Char1 : " << character1->speed()<< " - Char2 : "
+        <<character2->speed()<<" - Char3 : "<< character3->speed()<<
+        " - Char4 : "<< character4->speed()<< endl;
     }
     for (int i=0; i<11; i++){
       character1->Break();
       character2->Break();
       character3->Break();
       character4->Break();
-      fichier << "Char1 : " << character1->speed()<< " - Char2 : " << character2->speed()<< " - Char3 : " << character3->speed()<<" - Char4 : " << character4->speed()<< endl;
-    }
+      fichier << "Char1 : " << character1->speed()<< " - Char2 : "
+        <<character2->speed()<<" - Char3 : "<< character3->speed()<<
+        " - Char4 : "<< character4->speed()<< endl;    }
     fichier.close();
   }
   else
