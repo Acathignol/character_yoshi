@@ -42,13 +42,23 @@ int main(int argc, char* argv[]) {
   v.push_back(character4); 
   
   for (int i=0; i<5; i++) {
-    std::cout << v[i] << endl; 
+    std::cout << "Address in Vector: "<<v[i] << endl; 
   }
   
+  
+  printf("\n" );  
+  printf("What Am I? with Iterator for the Vector : \n");
   std::vector<Character*>::iterator it1 = v.begin();
   for (it1 = v.begin(); it1!=v.end(); it1++){
   (*it1)->WhatAmI(); 
   }
+  
+  
+  printf("\n" );  
+  printf("What Am I? with \'range-based for\' for the Vector : \n");
+  for (Character* d : v) { d->WhatAmI(); } // syntaxe de base
+  for (auto d : v) { cout << "What Am I? with \'auto\': " << d << endl; } // utilisation du mot clé auto
+
    
   std::list<Character*> l;
   l.push_back(character1); // Empile l'entier 1
@@ -56,10 +66,21 @@ int main(int argc, char* argv[]) {
   l.push_back(character3); 
   l.push_back(character4);
   
+  printf("\n" );  //for (i) doesn't work for list !
+  printf("What Am I? with Iterator for the List : \n");
   std::list<Character*>::iterator it = l.begin();
   for (it = l.begin(); it!=l.end(); it++){
   (*it)->WhatAmI(); 
   }
+  
+  printf("\n" );  
+  printf("What Am I? with \'range-based for\' for the List : \n");
+  for (Character* d : l) { d->WhatAmI(); } // syntaxe de base
+  for (auto d : l) { cout << "What Am I? with \'auto\': " << d << endl; } // utilisation du mot clé auto
+
+
+ 
+ 
  
   /*for (int i=0; i<5; i++) {
     std::cout << l[i] << endl; 
