@@ -42,12 +42,12 @@ void Yoshi::Accelerate() {
   if (speed_ > max_speed_) speed_ = max_speed_;
 }
 
-void Yoshi::Break() {
-  if (speed_ < 0.1) speed_ = 0.;
-  else speed_ *= 0.8;
-}
+//void Yoshi::Break() {
+//  if (speed_ < 0.1) speed_ = 0.;
+//  else speed_ *= 0.8;
+//}
 
-void Yoshi::WhatIAm(){
+void Yoshi::WhatAmI(){
   switch(colour_) {
       case RED  : std::cout << "Red";   break;
       case GREEN: std::cout << "Green"; break;

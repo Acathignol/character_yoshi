@@ -45,7 +45,7 @@ void Character::Break() {
   else speed_ *= 0.9;
 }
 
-//void WhatIAm(){
+//void WhatAmI(){
 //	std::cout<<"Yoshi"<<std::endl;
 //}
 	

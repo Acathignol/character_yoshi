@@ -36,8 +36,8 @@ class Character {
   //                              Public Methods
   // =========================================================================
   virtual void Accelerate();
-  void Break();
-  virtual void WhatIAm()=0;
+  virtual void Break();
+  virtual void WhatAmI()=0;
 
 protected :
   // =========================================================================
