@@ -1,9 +1,9 @@
 all : test_polymorph
 
-test_polymorph: test_polymorph.o Character.o Yoshi.o 
-	g++ test_polymorph.o Character.o Yoshi.o -o test_polymorph -std=c++11
+test_polymorph: test_polymorph.o Character.o Yoshi.o Mario.o
+	g++ test_polymorph.o Character.o Yoshi.o Mario.o -o test_polymorph -std=c++11
 	
-test_polymorph.o: test_polymorph.cpp Character.h Yoshi.h
+test_polymorph.o: test_polymorph.cpp Character.h Yoshi.h Mario.h
 	g++ -c test_polymorph.cpp -o test_polymorph.o -std=c++11
 	
 Character.o: Character.cpp Character.h
@@ -11,6 +11,9 @@ Character.o: Character.cpp Character.h
 
 Yoshi.o : Yoshi.cpp Character.h Yoshi.h 
 	g++ -c Yoshi.cpp -Wall -o Yoshi.o --std=c++11 
+	
+Mario.o : Mario.cpp Character.h Mario.h 
+	g++ -c Mario.cpp -Wall -o Mario.o --std=c++11 
 
 clean : 
 	rm -f *.o
