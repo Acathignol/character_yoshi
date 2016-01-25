@@ -18,9 +18,9 @@
 //                                    MAIN
 // ===========================================================================
 int main(int argc, char* argv[]) {
-  Yoshi       character2 = Yoshi(Yoshi::BLUE);
-  Yoshi*      character4 = new Yoshi(Yoshi::RED);
-  Character*  character7 = new Yoshi(Yoshi::GREEN);
+  Yoshi       character2 = Yoshi(0,Yoshi::BLUE);
+  Yoshi*      character4 = new Yoshi(2,Yoshi::RED);
+  Character*  character7 = new Yoshi(3,Yoshi::GREEN);
 
   character2.Accelerate();
   character4->Accelerate();

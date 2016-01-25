@@ -15,7 +15,8 @@
 // ===========================================================================
 //                                Constructors
 // ===========================================================================
-Yoshi::Yoshi(Colour colour) {
+Yoshi::Yoshi(float speed, Colour colour) {
+  speed_ = speed;
   colour_=colour;
   Yoshi::nb_instance ++;
   std::cout << nb_instance<<std::endl;
