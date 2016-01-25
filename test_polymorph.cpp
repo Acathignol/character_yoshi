@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
   printf("\n" );  
   printf("What Am I? with \'range-based for\' for the Vector : \n");
   for (Character* d : v) { d->WhatAmI(); } // syntaxe de base
-  for (auto d : v) { cout << "What Am I? with \'auto\': " << d << endl;}
+  for (auto d : v) { cout << "Address with \'auto\': " << d << endl;}
    // utilisation du mot clé auto
 
    
@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
   printf("\n" );  
   printf("What Am I? with \'range-based for\' for the List : \n");
   for (Character* d : l) { d->WhatAmI(); } // syntaxe de base
-  for (auto d : l) { cout << "What Am I? with \'auto\': " << d << endl;}
+  for (auto d : l) { cout << "Address with \'auto\': " << d << endl;}
    // utilisation du mot clé auto
 
 
