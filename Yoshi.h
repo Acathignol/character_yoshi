@@ -48,7 +48,7 @@ class Yoshi : public Character {
   //                                Attributes
   // =========================================================================
   static float nb_instance; 
-  //int colour;
+  static int colour_;
 };
 
 // ===========================================================================

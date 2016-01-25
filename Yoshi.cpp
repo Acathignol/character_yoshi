@@ -11,7 +11,7 @@
 //                       Definition of static attributes
 // ===========================================================================
   float Yoshi:: nb_instance =0;
-  //int Yoshi:: colour=0;
+  int Yoshi::colour_=1;
 // ===========================================================================
 //                                Constructors
 // ===========================================================================
@@ -45,7 +45,7 @@ void Yoshi::Break() {
   else speed_ *= 0.8;
 }
 void Yoshi::WhatIAm(){
-	std::cout<<"Yoshi"<<std::endl;
+  if (colour_==1) std::cout<<"Green Yoshi"<<std::endl;
 }
 // ===========================================================================
 //                              Protected Methods

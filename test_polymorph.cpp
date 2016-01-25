@@ -39,6 +39,8 @@ int main(int argc, char* argv[]) {
   printf("Character 2 speed : %f\n", character2.speed());
   printf("Character 4 speed : %f\n", character4->speed());
   printf("Character 7 speed : %f\n", character7->speed());
+  
+  character2.WhatIAm();
 
   delete character4; 
   delete character7; 
