@@ -13,7 +13,9 @@ class Character {
   //                               Constructors
   // =========================================================================
   Character();
-
+  Character(const Character &character);
+  Character& operator=(const Character &character);
+  
   // =========================================================================
   //                                Destructor
   // =========================================================================

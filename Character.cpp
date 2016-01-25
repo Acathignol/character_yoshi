@@ -22,6 +22,23 @@ Character::Character() {
   std::cout <<nb_instance<<std::endl;
 }
 
+Character::Character(const Character &character) {
+  speed_     = character.speed_;
+  max_speed_ = character.max_speed_;
+  Character::nb_instance ++;
+  std::cout <<nb_instance<<std::endl;
+}
+
+Character& Character::operator=(const Character &character){
+  this-> speed_     = character.speed_;
+  this-> max_speed_ = character.max_speed_;
+  Character::nb_instance ++;
+  std::cout <<nb_instance<<std::endl;
+  return *this;
+}
+
+
+
 // ===========================================================================
 //                                 Destructor
 // ===========================================================================

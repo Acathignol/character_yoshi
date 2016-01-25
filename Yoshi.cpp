@@ -20,7 +20,6 @@ Yoshi::Yoshi(float speed, Colour colour) {
   colour_=colour;
   Yoshi::nb_instance ++;
   std::cout << nb_instance<<std::endl;
-
 }
 
 // ===========================================================================
